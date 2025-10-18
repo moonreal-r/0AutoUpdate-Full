@@ -1,0 +1,9 @@
+﻿@UpdateServer_HostAddress = https://localhost:7093
+
+GET {{UpdateServer_HostAddress}}/update.json
+
+###
+
+POST {{UpdateServer_HostAddress}}/upload
+
+###

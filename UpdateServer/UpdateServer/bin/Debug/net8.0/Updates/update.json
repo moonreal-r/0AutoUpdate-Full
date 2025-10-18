@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "name": "AutoUpdater",
+      "version": "1.0.0.0",
+      "fileName": "AutoUpdater.zip",
+      "url": "http://localhost:5010/AutoUpdater.zip",
+      "exeName": "AutoUpdater.exe",
+      "size": 77915,
+      "checksum": "cbc8e846af0a8b865165a2dde9b65d52",
+      "notes": "AutoUpdater \u4E0A\u4F20"
+    },
+    {
+      "name": "FSCapture",
+      "version": "1.0.0.0",
+      "fileName": "FSCapture.zip",
+      "url": "http://localhost:5010/FSCapture.zip",
+      "exeName": "FSCapture.exe",
+      "size": 12372898,
+      "checksum": "bd2ef45af0f36995aff3eef193e03336",
+      "notes": "FSCapture \u4E0A\u4F20"
+    }
+  ]
+}
