@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\Api\\UpdateServer\\UpdateServer\\UpdateServer.csproj",
+      "projectUniqueName": "D:\\C#\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.csproj",
       "projectName": "UpdateServer",
-      "projectPath": "D:\\C#\\Api\\UpdateServer\\UpdateServer\\UpdateServer.csproj",
+      "projectPath": "D:\\C#\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\Api\\UpdateServer\\UpdateServer\\obj\\",
+      "outputPath": "D:\\C#\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,7 +75,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
