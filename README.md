@@ -25,7 +25,8 @@
 
 1.开启UpdateServer
 
-2.打包需上传文件(不需要打包目录,需包含版本信息local_version.txt)-通过API POST上传压缩包 参数:file,name(与启动文件exe同名),version,notes(非必填)
+2.打包需上传文件(不需要打包目录,需包含版本信息local_version.txt)-通过API POST上传压缩包 参数:file,name(与启动文件exe同名),version
+
 必须上传:AutoUpdateClient,AutoUpdater(AutoUpdater与UpdaterReplacer合并打包)
 
 3.将AutoUpdateClient提供给客机
