@@ -1,34 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
+﻿using System.Diagnostics;
 using System.IO.Compression;
-using System.Linq;
-using System.Net.Http;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 class AutoUpdater
 {
     private static readonly HttpClient http = new();
-    private static readonly string DefaultRootConfigUrl = "http://192.168.16.52:5010/update.json";
+    private static string UpdateServerUrl = "http://127.0.0.1:5010/update.json";
 
     static async Task Main()
     {
+        string appDir = AppContext.BaseDirectory;
+        string configPath = Path.Combine(appDir, "config.json");
+
+        if (File.Exists(configPath))
+        {
+            try
+            {
+                var configJson = File.ReadAllText(configPath);
+                var config = JsonSerializer.Deserialize<Dictionary<string, string>>(configJson);
+                if (
+                    config != null
+                    && config.TryGetValue("UpdateServerUrl", out string? url)
+                    && !string.IsNullOrWhiteSpace(url)
+                )
+                {
+                    UpdateServerUrl = url;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"读取配置文件失败，使用默认更新地址: {ex.Message}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("未找到 config.json，使用默认更新地址。");
+        }
+
         Console.WriteLine($"当前运行目录: {AppContext.BaseDirectory}");
 
-        string appDir = AppContext.BaseDirectory;
         string exePath = Path.Combine(appDir, "AutoUpdater.exe");
         string localVersionFile = Path.Combine(appDir, "local_version.txt");
         string AutoUpdaterTempDir = Path.Combine(appDir, "AutoUpdaterTemp");
         string tempDir = Path.Combine(appDir, "Temp");
 
         // === 1. 拉取 update.json ===
-        Console.WriteLine($"正在连接更新服务器: {DefaultRootConfigUrl}");
+        Console.WriteLine($"正在连接更新服务器: {UpdateServerUrl}");
         string json;
         try
         {
-            json = await http.GetStringAsync(DefaultRootConfigUrl);
+            json = await http.GetStringAsync(UpdateServerUrl);
             Console.WriteLine("获取 update.json 成功");
         }
         catch (Exception ex)

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
+﻿using System.Diagnostics;
 using System.IO.Compression;
-using System.Net.Http;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 class AutoUpdateClient
 {
-    private static readonly string UpdateServerUrl = "http://localhost:5010/update.json";
+    private static string UpdateServerUrl = "http://127.0.0.1:5010/update.json"; // 默认备用地址
     private static readonly string DownloadFolder = Path.Combine(
         AppContext.BaseDirectory,
         "Downloads"
@@ -33,6 +29,34 @@ class AutoUpdateClient
 
     static async Task Main()
     {
+        string appDir = AppContext.BaseDirectory;
+        string configPath = Path.Combine(appDir, "config.json");
+
+        if (File.Exists(configPath))
+        {
+            try
+            {
+                var configJson = File.ReadAllText(configPath);
+                var config = JsonSerializer.Deserialize<Dictionary<string, string>>(configJson);
+                if (
+                    config != null
+                    && config.TryGetValue("UpdateServerUrl", out string? url)
+                    && !string.IsNullOrWhiteSpace(url)
+                )
+                {
+                    UpdateServerUrl = url;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"读取配置文件失败，使用默认更新地址: {ex.Message}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("未找到 config.json，使用默认更新地址。");
+        }
+
         Directory.CreateDirectory(DownloadFolder);
         Directory.CreateDirectory(InstallRootDir);
 
@@ -111,16 +135,16 @@ class AutoUpdateClient
             )
                 continue;
 
-            string appDir = Path.Combine(InstallRootDir, app.name);
-            string mainDir = Path.Combine(appDir, app.name);
-            string updaterExe = Path.Combine(appDir, "AutoUpdater.exe");
+            string appInstallDir = Path.Combine(InstallRootDir, app.name);
+            string mainDir = Path.Combine(appInstallDir, app.name);
+            string updaterExe = Path.Combine(appInstallDir, "AutoUpdater.exe");
 
-            if (!Directory.Exists(appDir) || !File.Exists(updaterExe))
+            if (!Directory.Exists(appInstallDir) || !File.Exists(updaterExe))
             {
                 Console.WriteLine($"\n[{app.name}] 未安装，是否下载? (Y/N)");
                 if (Console.ReadKey().Key == ConsoleKey.Y)
                 {
-                    await DownloadSoftwareWithUpdater(app, mainDir, updaterInfo, appDir);
+                    await DownloadSoftwareWithUpdater(app, mainDir, updaterInfo, appInstallDir);
                     Console.WriteLine(
                         $"\n[{app.name}] 下载完成！请使用 {updaterExe} 启动软件并自动更新。"
                     );
