@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1616862A-318E-5D08-C3B9-B01B60940B8D}|AutoUpdater\\AutoUpdater\\AutoUpdater.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\autoupdater\\autoupdater\\autoupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1616862A-318E-5D08-C3B9-B01B60940B8D}|AutoUpdater\\AutoUpdater\\AutoUpdater.csproj|solutionrelative:autoupdater\\autoupdater\\autoupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43036336-A3DE-A119-280D-236F7CB442E4}|UpdateServer\\UpdateServer\\UpdateServer.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\updateserver\\updateserver\\updateserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43036336-A3DE-A119-280D-236F7CB442E4}|UpdateServer\\UpdateServer\\UpdateServer.csproj|solutionrelative:updateserver\\updateserver\\updateserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateServer.cs",
-              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.cs",
-              "RelativeDocumentMoniker": "UpdateServer\\UpdateServer\\UpdateServer.cs",
-              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.cs",
-              "RelativeToolTip": "UpdateServer\\UpdateServer\\UpdateServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T05:31:54.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AutoUpdater.cs",
-              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
-              "RelativeDocumentMoniker": "AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
-              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
-              "RelativeToolTip": "AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAIwPcAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T05:24:00.65Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
