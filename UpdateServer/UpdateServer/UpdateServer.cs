@@ -1,6 +1,13 @@
 ﻿using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// --- 增加 Kestrel 上传限制 ---
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.MaxRequestBodySize = 200_000_000; // 约 190 MB
+});
+
 var app = builder.Build();
 
 // === 更新文件目录 ===

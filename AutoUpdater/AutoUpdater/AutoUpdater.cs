@@ -232,19 +232,48 @@ class AutoUpdater
         }
     }
 
-    private static void EnsureAppNotRunning(string exeName)
+    private static void EnsureAppNotRunning(string exeName, int waitMilliseconds = 5000)
     {
-        var processes = Process.GetProcessesByName(Path.GetFileNameWithoutExtension(exeName));
+        string processName = Path.GetFileNameWithoutExtension(exeName);
+        var processes = Process.GetProcessesByName(processName);
+
         foreach (var proc in processes)
         {
             try
             {
-                proc.Kill();
-                proc.WaitForExit();
-                Console.WriteLine($"已关闭运行中的 {exeName}");
+                // 尝试正常关闭
+                if (!proc.HasExited && proc.MainWindowHandle != IntPtr.Zero)
+                {
+                    Console.WriteLine($"尝试正常关闭 {exeName}...");
+                    proc.CloseMainWindow(); // 发送 WM_CLOSE 消息
+                    if (!proc.WaitForExit(waitMilliseconds))
+                    {
+                        // 超时未退出，使用强制终止
+                        Console.WriteLine($"{exeName} 未响应，强制终止中...");
+                        proc.Kill();
+                        proc.WaitForExit();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{exeName} 已正常关闭。");
+                    }
+                }
+                else
+                {
+                    // 无窗口或已经退出，直接 Kill
+                    proc.Kill();
+                    proc.WaitForExit();
+                    Console.WriteLine($"已强制关闭 {exeName}（无窗口或已退出）。");
+                }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"关闭 {exeName} 时发生异常: {ex.Message}");
+            }
         }
+
+        if (!processes.Any())
+            Console.WriteLine($"{exeName} 未在运行中。");
     }
 
     private class UpdateList
