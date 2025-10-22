@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.csproj",
+      "projectUniqueName": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.csproj",
       "projectName": "AutoUpdateClient",
-      "projectPath": "D:\\C#\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.csproj",
+      "projectPath": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\obj\\",
+      "outputPath": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

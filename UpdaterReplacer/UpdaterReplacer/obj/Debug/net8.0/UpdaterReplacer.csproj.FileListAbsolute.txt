@@ -1,0 +1,15 @@
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\bin\Debug\net8.0\UpdaterReplacer.exe
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\bin\Debug\net8.0\UpdaterReplacer.deps.json
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\bin\Debug\net8.0\UpdaterReplacer.runtimeconfig.json
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\bin\Debug\net8.0\UpdaterReplacer.dll
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\bin\Debug\net8.0\UpdaterReplacer.pdb
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\UpdaterReplacer.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\UpdaterReplacer.AssemblyInfoInputs.cache
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\UpdaterReplacer.AssemblyInfo.cs
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\UpdaterReplacer.csproj.CoreCompileInputs.cache
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\UpdaterReplacer.sourcelink.json
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\UpdaterReplacer.dll
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\refint\UpdaterReplacer.dll
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\UpdaterReplacer.pdb
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\UpdaterReplacer.genruntimeconfig.cache
+D:\C#\ConsoleApp\0AutoUpdate-Full\UpdaterReplacer\UpdaterReplacer\obj\Debug\net8.0\ref\UpdaterReplacer.dll

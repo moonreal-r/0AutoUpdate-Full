@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C#\\0AutoUpdate-Full\\",
+  "WorkspaceRootPath": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43036336-A3DE-A119-280D-236F7CB442E4}|UpdateServer\\UpdateServer\\UpdateServer.csproj|d:\\c#\\0autoupdate-full\\updateserver\\updateserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43036336-A3DE-A119-280D-236F7CB442E4}|UpdateServer\\UpdateServer\\UpdateServer.csproj|solutionrelative:updateserver\\updateserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6530C9BA-5F16-21FE-A6D6-8CD8DAE29433}|UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\updaterreplacer\\updaterreplacer\\updaterreplacer.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{6530C9BA-5F16-21FE-A6D6-8CD8DAE29433}|UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.csproj|solutionrelative:updaterreplacer\\updaterreplacer\\updaterreplacer.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8EB9195-F44F-0368-1EF0-79D3EEC84109}|AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.csproj|d:\\c#\\0autoupdate-full\\autoupdateclient\\autoupdateclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8EB9195-F44F-0368-1EF0-79D3EEC84109}|AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.csproj|solutionrelative:autoupdateclient\\autoupdateclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1616862A-318E-5D08-C3B9-B01B60940B8D}|AutoUpdater\\AutoUpdater\\AutoUpdater.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\autoupdater\\autoupdater\\autoupdater.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{1616862A-318E-5D08-C3B9-B01B60940B8D}|AutoUpdater\\AutoUpdater\\AutoUpdater.csproj|solutionrelative:autoupdater\\autoupdater\\autoupdater.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1616862A-318E-5D08-C3B9-B01B60940B8D}|AutoUpdater\\AutoUpdater\\AutoUpdater.csproj|d:\\c#\\0autoupdate-full\\autoupdater\\autoupdater\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1616862A-318E-5D08-C3B9-B01B60940B8D}|AutoUpdater\\AutoUpdater\\AutoUpdater.csproj|solutionrelative:autoupdater\\autoupdater\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1616862A-318E-5D08-C3B9-B01B60940B8D}|AutoUpdater\\AutoUpdater\\AutoUpdater.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\autoupdater\\autoupdater\\autoupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1616862A-318E-5D08-C3B9-B01B60940B8D}|AutoUpdater\\AutoUpdater\\AutoUpdater.csproj|solutionrelative:autoupdater\\autoupdater\\autoupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6530C9BA-5F16-21FE-A6D6-8CD8DAE29433}|UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\updaterreplacer\\updaterreplacer\\updaterreplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6530C9BA-5F16-21FE-A6D6-8CD8DAE29433}|UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.csproj|solutionrelative:updaterreplacer\\updaterreplacer\\updaterreplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,46 +29,53 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AutoUpdater",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\AutoUpdater.csproj",
+              "RelativeDocumentMoniker": "AutoUpdater\\AutoUpdater\\AutoUpdater.csproj",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\AutoUpdater.csproj",
+              "RelativeToolTip": "AutoUpdater\\AutoUpdater\\AutoUpdater.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-22T00:37:22.44Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\C#\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\Program.cs",
-              "RelativeDocumentMoniker": "UpdateServer\\UpdateServer\\Program.cs",
-              "ToolTip": "D:\\C#\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\Program.cs",
-              "RelativeToolTip": "UpdateServer\\UpdateServer\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAACMAAAAUAAAAAAAAAA==",
+              "Title": "UpdaterReplacer",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.csproj",
+              "RelativeDocumentMoniker": "UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.csproj",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.csproj",
+              "RelativeToolTip": "UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-20T08:49:23.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdaterReplacer.cs",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.cs",
+              "RelativeDocumentMoniker": "UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.cs",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.cs",
+              "RelativeToolTip": "UpdaterReplacer\\UpdaterReplacer\\UpdaterReplacer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAIAywCUAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T07:54:03.871Z",
+              "WhenOpened": "2025-10-20T08:47:20.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\C#\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\Program.cs",
-              "RelativeDocumentMoniker": "AutoUpdater\\AutoUpdater\\Program.cs",
-              "ToolTip": "D:\\C#\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\Program.cs",
-              "RelativeToolTip": "AutoUpdater\\AutoUpdater\\Program.cs",
-              "ViewState": "AgIAANgAAAAAAAAAAAAIwA0AAABhAAAAAAAAAA==",
+              "Title": "AutoUpdater.cs",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
+              "RelativeDocumentMoniker": "AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
+              "RelativeToolTip": "AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAQwJwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T07:40:15.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\C#\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\Program.cs",
-              "RelativeDocumentMoniker": "AutoUpdateClient\\AutoUpdateClient\\Program.cs",
-              "ToolTip": "D:\\C#\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\Program.cs",
-              "RelativeToolTip": "AutoUpdateClient\\AutoUpdateClient\\Program.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAowGoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T07:35:59.372Z",
+              "WhenOpened": "2025-10-20T07:11:15.433Z",
               "EditorCaption": ""
             }
           ]

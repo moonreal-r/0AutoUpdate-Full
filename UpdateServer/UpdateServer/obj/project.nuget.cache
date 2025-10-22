@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Exa9ksrCh8=",
+  "dgSpecHash": "rllqogT1aWY=",
   "success": true,
-  "projectFilePath": "D:\\C#\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.csproj",
+  "projectFilePath": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
