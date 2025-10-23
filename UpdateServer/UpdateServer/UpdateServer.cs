@@ -94,13 +94,32 @@ app.MapPost(
     {
         var form = await request.ReadFormAsync();
         var file = form.Files.GetFile("file");
-        var version = form["version"].ToString();
+        var versionStr = form["version"].ToString();
 
-        if (file == null || string.IsNullOrEmpty(version))
+        if (file == null || string.IsNullOrEmpty(versionStr))
             return Results.BadRequest("缺少文件或版本号");
 
         if (!file.FileName.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
             return Results.BadRequest("仅支持 ZIP 文件上传");
+
+        string appName = Path.GetFileNameWithoutExtension(file.FileName);
+
+        // 版本号校验逻辑
+        if (meta.TryGetValue(appName, out string existingVersionStr))
+        {
+            if (
+                TryParseVersion(existingVersionStr, out var existingVersion)
+                && TryParseVersion(versionStr, out var newVersion)
+            )
+            {
+                if (newVersion <= existingVersion)
+                {
+                    return Results.BadRequest(
+                        $"版本号无效：上传版本 {versionStr} 不得低于当前版本 {existingVersionStr}"
+                    );
+                }
+            }
+        }
 
         // 保存文件
         string savePath = Path.Combine(updateDir, Path.GetFileName(file.FileName));
@@ -119,8 +138,7 @@ app.MapPost(
         }
 
         // 更新版本信息
-        string appName = Path.GetFileNameWithoutExtension(file.FileName);
-        meta[appName] = version;
+        meta[appName] = versionStr;
         await File.WriteAllTextAsync(
             metaFile,
             JsonSerializer.Serialize(meta, new JsonSerializerOptions { WriteIndented = true })
@@ -130,22 +148,28 @@ app.MapPost(
         string baseUrl = configuredPublicBaseUrl.TrimEnd('/');
         string fileUrl = $"{baseUrl}/{Uri.EscapeDataString(file.FileName)}";
 
-        Console.WriteLine($"上传完成: {file.FileName} 版本 {version}");
+        Console.WriteLine($"上传完成: {file.FileName} 版本 {versionStr}");
 
         return Results.Ok(
             new
             {
                 message = "上传成功",
                 name = appName,
-                version,
+                version = versionStr,
                 fileName = file.FileName,
                 exeName = appName + ".exe",
                 checksum,
                 url = fileUrl,
-                notes = $"{appName} 最新版本 {version}",
+                notes = $"{appName} 最新版本 {versionStr}",
             }
         );
     }
 );
 
 app.Run("http://0.0.0.0:5010");
+
+// === 版本号比较辅助函数 ===
+static bool TryParseVersion(string versionStr, out Version version)
+{
+    return Version.TryParse(versionStr.TrimStart('v', 'V'), out version);
+}

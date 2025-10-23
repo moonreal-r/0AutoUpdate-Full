@@ -89,7 +89,18 @@ class AutoUpdater
             string zipPath = Path.Combine(AutoUpdaterTempDir, selfApp.fileName);
             Console.WriteLine($"当前 自我更新 zipPath: {zipPath}");
 
-            await DownloadFileAsync(selfApp.url, zipPath, "AutoUpdater");
+            // 自我更新 下载并校验
+            bool ok = await DownloadFileAsyncWithMd5Check(
+                selfApp.url,
+                zipPath,
+                "AutoUpdater",
+                selfApp.checksum
+            );
+            if (!ok)
+            {
+                Console.WriteLine("AutoUpdater 自我更新失败：文件下载或校验失败。");
+                return;
+            }
 
             ZipFile.ExtractToDirectory(zipPath, AutoUpdaterTempDir, true);
             Console.WriteLine($"当前 自我更新 解压路径 AutoUpdaterTempDir: {AutoUpdaterTempDir}");
@@ -173,7 +184,18 @@ class AutoUpdater
             string zipPath = Path.Combine(tempDir, mainApp.fileName);
             Console.WriteLine($"当前 主应用更新 zipPath: {zipPath}");
 
-            await DownloadFileAsync(mainApp.url, zipPath, mainApp.name);
+            // 主应用 下载并校验
+            bool ok = await DownloadFileAsyncWithMd5Check(
+                mainApp.url,
+                zipPath,
+                mainApp.name,
+                mainApp.checksum
+            );
+            if (!ok)
+            {
+                Console.WriteLine($"{mainApp.name} 更新失败：文件下载或校验失败。");
+                return;
+            }
 
             ZipFile.ExtractToDirectory(zipPath, tempDir, true);
 
@@ -214,22 +236,111 @@ class AutoUpdater
         Console.WriteLine("\n更新完成");
     }
 
-    private static async Task DownloadFileAsync(string url, string destPath, string appName)
+    private static async Task<bool> DownloadFileAsyncWithMd5Check(
+        string url,
+        string destPath,
+        string appName,
+        string? expectedMd5,
+        int maxRetries = 3
+    )
     {
-        try
+        for (int attempt = 1; attempt <= maxRetries; attempt++)
         {
-            Console.WriteLine($"[{appName}] 下载中: {url}");
-            using var response = await http.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
-            response.EnsureSuccessStatusCode();
-            await using var stream = await response.Content.ReadAsStreamAsync();
-            await using var fs = new FileStream(destPath, FileMode.Create, FileAccess.Write);
-            await stream.CopyToAsync(fs);
-            Console.WriteLine($"[{appName}] 下载完成: {destPath}");
+            try
+            {
+                // === Step 1: 确保目标文件可写 ===
+                if (File.Exists(destPath))
+                {
+                    try
+                    {
+                        using (
+                            FileStream fs = File.Open(
+                                destPath,
+                                FileMode.Open,
+                                FileAccess.ReadWrite,
+                                FileShare.None
+                            )
+                        )
+                        {
+                            // 可以正常打开，表示未锁定
+                        }
+                        File.Delete(destPath); // 删除旧的未锁定文件
+                    }
+                    catch
+                    {
+                        Console.WriteLine($"[{appName}] 目标文件被占用，等待 1 秒释放...");
+                        await Task.Delay(1000);
+                        continue; // 重试本次
+                    }
+                }
+
+                Console.WriteLine($"[{appName}] 第 {attempt}/{maxRetries} 次下载中: {url}");
+                using var response = await http.GetAsync(
+                    url,
+                    HttpCompletionOption.ResponseHeadersRead
+                );
+                response.EnsureSuccessStatusCode();
+
+                await using (var stream = await response.Content.ReadAsStreamAsync())
+                await using (
+                    var fs = new FileStream(
+                        destPath,
+                        FileMode.Create,
+                        FileAccess.Write,
+                        FileShare.None
+                    )
+                )
+                {
+                    await stream.CopyToAsync(fs);
+                }
+
+                Console.WriteLine($"[{appName}] 下载完成: {destPath}");
+
+                // === Step 2: 校验 MD5 ===
+                if (!string.IsNullOrWhiteSpace(expectedMd5))
+                {
+                    string localMd5 = ComputeFileMd5(destPath);
+                    if (string.Equals(localMd5, expectedMd5, StringComparison.OrdinalIgnoreCase))
+                    {
+                        Console.WriteLine($"[{appName}] MD5 校验通过: {localMd5}");
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine(
+                            $"[{appName}] MD5 校验失败 (期望: {expectedMd5}, 实际: {localMd5})"
+                        );
+                    }
+                }
+                else
+                {
+                    // 没有 MD5 值则直接通过
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[{appName}] 下载失败: {ex.Message}");
+            }
+
+            // === Step 3: 重试等待 ===
+            if (attempt < maxRetries)
+            {
+                Console.WriteLine($"[{appName}] 等待 2 秒后重试...");
+                await Task.Delay(2000);
+            }
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"DownloadFileAsync 出错:{ex}");
-        }
+
+        Console.WriteLine($"[{appName}] ❌ 下载多次仍失败，放弃更新。");
+        return false;
+    }
+
+    private static string ComputeFileMd5(string filePath)
+    {
+        using var md5 = System.Security.Cryptography.MD5.Create();
+        using var stream = File.OpenRead(filePath);
+        byte[] hash = md5.ComputeHash(stream);
+        return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
     }
 
     private static void EnsureAppNotRunning(string exeName, int waitMilliseconds = 5000)
@@ -288,5 +399,6 @@ class AutoUpdater
         public string fileName { get; set; } = "";
         public string url { get; set; } = "";
         public string exeName { get; set; } = "";
+        public string checksum { get; set; } = "";
     }
 }

@@ -9,6 +9,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{43036336-A3DE-A119-280D-236F7CB442E4}|UpdateServer\\UpdateServer\\UpdateServer.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\updateserver\\updateserver\\updateserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43036336-A3DE-A119-280D-236F7CB442E4}|UpdateServer\\UpdateServer\\UpdateServer.csproj|solutionrelative:updateserver\\updateserver\\updateserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F29B443F-3AA6-BDEC-FE85-FAE09C390E6D}|UpdateServerForNginx\\UpdateServerForNginx\\UpdateServerForNginx.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\updateserverfornginx\\updateserverfornginx\\updateserverfornginx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F29B443F-3AA6-BDEC-FE85-FAE09C390E6D}|UpdateServerForNginx\\UpdateServerForNginx\\UpdateServerForNginx.csproj|solutionrelative:updateserverfornginx\\updateserverfornginx\\updateserverfornginx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8EB9195-F44F-0368-1EF0-79D3EEC84109}|AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\autoupdateclient\\autoupdateclient\\autoupdateclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8EB9195-F44F-0368-1EF0-79D3EEC84109}|AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.csproj|solutionrelative:autoupdateclient\\autoupdateclient\\autoupdateclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,20 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateServer.cs",
-              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.cs",
-              "RelativeDocumentMoniker": "UpdateServer\\UpdateServer\\UpdateServer.cs",
-              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.cs",
-              "RelativeToolTip": "UpdateServer\\UpdateServer\\UpdateServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T05:31:54.078Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,9 +36,48 @@
               "RelativeDocumentMoniker": "AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
               "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
               "RelativeToolTip": "AutoUpdater\\AutoUpdater\\AutoUpdater.cs",
-              "ViewState": "AgIAAAYBAAAAAAAAAAAgwCQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAIwDYBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T05:24:00.65Z",
+              "WhenOpened": "2025-10-23T06:55:30.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateServerForNginx.cs",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServerForNginx\\UpdateServerForNginx\\UpdateServerForNginx.cs",
+              "RelativeDocumentMoniker": "UpdateServerForNginx\\UpdateServerForNginx\\UpdateServerForNginx.cs",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServerForNginx\\UpdateServerForNginx\\UpdateServerForNginx.cs",
+              "RelativeToolTip": "UpdateServerForNginx\\UpdateServerForNginx\\UpdateServerForNginx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T06:26:28.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateServer.cs",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.cs",
+              "RelativeDocumentMoniker": "UpdateServer\\UpdateServer\\UpdateServer.cs",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServer\\UpdateServer\\UpdateServer.cs",
+              "RelativeToolTip": "UpdateServer\\UpdateServer\\UpdateServer.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAIQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T06:26:19.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AutoUpdateClient.cs",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.cs",
+              "RelativeDocumentMoniker": "AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.cs",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.cs",
+              "RelativeToolTip": "AutoUpdateClient\\AutoUpdateClient\\AutoUpdateClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T06:21:32.05Z",
               "EditorCaption": ""
             }
           ]

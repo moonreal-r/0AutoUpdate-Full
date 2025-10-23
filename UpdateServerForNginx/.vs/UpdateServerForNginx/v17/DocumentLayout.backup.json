@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServerForNginx\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB1D1692-6DB2-4419-A4FD-4105055C2006}|UpdateServerForNginx\\UpdateServerForNginx.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\updateserverfornginx\\updateserverfornginx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CB1D1692-6DB2-4419-A4FD-4105055C2006}|UpdateServerForNginx\\UpdateServerForNginx.csproj|solutionrelative:updateserverfornginx\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB1D1692-6DB2-4419-A4FD-4105055C2006}|UpdateServerForNginx\\UpdateServerForNginx.csproj|d:\\c#\\consoleapp\\0autoupdate-full\\updateserverfornginx\\updateserverfornginx\\updateserverfornginx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB1D1692-6DB2-4419-A4FD-4105055C2006}|UpdateServerForNginx\\UpdateServerForNginx.csproj|solutionrelative:updateserverfornginx\\updateserverfornginx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServerForNginx\\UpdateServerForNginx\\appsettings.json",
+              "RelativeDocumentMoniker": "UpdateServerForNginx\\appsettings.json",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServerForNginx\\UpdateServerForNginx\\appsettings.json",
+              "RelativeToolTip": "UpdateServerForNginx\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-23T05:42:30.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateServerForNginx.cs",
+              "DocumentMoniker": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServerForNginx\\UpdateServerForNginx\\UpdateServerForNginx.cs",
+              "RelativeDocumentMoniker": "UpdateServerForNginx\\UpdateServerForNginx.cs",
+              "ToolTip": "D:\\C#\\ConsoleApp\\0AutoUpdate-Full\\UpdateServerForNginx\\UpdateServerForNginx\\UpdateServerForNginx.cs",
+              "RelativeToolTip": "UpdateServerForNginx\\UpdateServerForNginx.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAUwBAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T05:38:58.203Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
