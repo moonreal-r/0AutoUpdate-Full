@@ -6,7 +6,8 @@
 
 ## 功能实现
 
-- UpdateServer 上传文件API
+- UpdateServer 上传下载文件API
+- UpdateServerForNginx 上传文件API,仅上传与生成json,静态文件由Nginx托管
 - AutoUpdateClient 目录构建-软件下载
 - AutoUpdater 软件更新
 - UpdaterReplacer 软件更新程序自我更新文件替换程序
